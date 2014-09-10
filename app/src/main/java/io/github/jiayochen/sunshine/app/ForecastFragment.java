@@ -1,8 +1,6 @@
 package io.github.jiayochen.sunshine.app;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -34,7 +32,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.StringTokenizer;
 
 /**
  * Created by jiayochen on 8/11/2014.

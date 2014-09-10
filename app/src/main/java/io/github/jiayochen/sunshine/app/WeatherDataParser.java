@@ -3,10 +3,10 @@ package io.github.jiayochen.sunshine.app;
 /**
  * Created by jiayochen on 8/18/2014.
  */
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import java.util.StringTokenizer;
 
 public class WeatherDataParser {
 
