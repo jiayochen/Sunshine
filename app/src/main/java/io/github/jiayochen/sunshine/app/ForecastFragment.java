@@ -119,7 +119,7 @@ public class ForecastFragment extends Fragment {
             String postcode = params[0];
             String format = "json";
             String units = "metric";
-            int numDays = 7;
+            int numDays = 14;
             String forecastJsonStr = null;
 
             final String FORECAST_BASE_URL = "http://api.openweathermap.org/data/2.5/forecast/daily?";
@@ -208,6 +208,10 @@ public class ForecastFragment extends Fragment {
             return format.format(date).toString();
         }
 
+        private double convertCelsiusToFahrenheit(double temp) {
+            return ((temp * 9) / 5) + 32;
+        }
+
         /**
          * Prepare the weather high/lows for presentation.
          */
@@ -217,10 +221,9 @@ public class ForecastFragment extends Fragment {
             //convert to Imperial if necessary
             if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getString(getString(R.string.pref_units_key), getString(R.string.pref_units_default))
                     .equals(getString(R.string.pref_units_imperial))) {
-                high = high * 9;
-                high = high / 5;
-                low = low * 9;
-                low = low / 5;
+                high = convertCelsiusToFahrenheit(high);
+                low = convertCelsiusToFahrenheit(low);
+
             }
 
             long roundedHigh = Math.round(high);

@@ -119,7 +119,7 @@ public class DetailActivity extends ActionBarActivity {
             startActivity(intent);
         }
         else {
-            Toast.makeText(this, "No map tool found for viewing your location.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.msg_no_map_app), Toast.LENGTH_SHORT).show();
         }
     }
 }
