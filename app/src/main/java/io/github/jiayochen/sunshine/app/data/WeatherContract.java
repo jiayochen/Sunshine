@@ -1,5 +1,6 @@
 package io.github.jiayochen.sunshine.app.data;
 
+import android.net.Uri;
 import android.provider.BaseColumns;
 
 /**
@@ -10,7 +11,13 @@ import android.provider.BaseColumns;
  */
 public class WeatherContract {
 
+    public static final String CONTENT_AUTHORITY = "io.github.jiayochen.sunshine.app";
+    public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
+    public static final String PATH_WEATHER = "weather";
+    public static final String PATH_LOCATION = "location";
+
     public static final class LocationEntry implements BaseColumns {
+        public static final Uri CONTENT_URI = BASE_CONTENT_URI.buildUpon().appendPath(PATH_LOCATION).build();
 
         public static final String TABLE_NAME = "location";
 
@@ -24,6 +31,7 @@ public class WeatherContract {
 
     /* Inner class that defines the table contents of the weather table */
     public static final class WeatherEntry implements BaseColumns {
+        public static final Uri CONTENT_URI = BASE_CONTENT_URI.buildUpon().appendPath(PATH_WEATHER).build();
 
         public static final String TABLE_NAME = "weather";
 
