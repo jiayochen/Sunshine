@@ -34,6 +34,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.github.jiayochen.sunshine.app.MainActivity" />
         </activity>
+        <provider
+            android.name=".data.WeatherProvider" />
+            android:authorities="io.github.jiayochen.sunshine.app"
     </application>
 
 </manifest>
