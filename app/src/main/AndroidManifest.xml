@@ -34,9 +34,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.github.jiayochen.sunshine.app.MainActivity" />
         </activity>
+
         <provider
-            android.name=".data.WeatherProvider" />
-            android:authorities="io.github.jiayochen.sunshine.app"
+            android:name=".data.WeatherProvider"
+            android:authorities="io.github.jiayochen.sunshine.app" />
+
+        <activity
+            android:name=".BaseActivity"
+            android:label="@string/title_activity_base" >
+        </activity>
     </application>
 
 </manifest>

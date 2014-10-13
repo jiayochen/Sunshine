@@ -17,16 +17,14 @@
 
     <!-- Default postal code for location preference [CHAR LIMIT=NONE] -->
     <string name="pref_location_default" translatable="false">94043</string>
-
     <string name="pref_units_label">Temperature Units</string>
     <string name="pref_units_key" translatable="false">units</string>
     <string name="pref_units_default" translatable="false">Metric</string>
     <string name="pref_units_metric">Metric</string>
     <string name="pref_units_imperial">Imperial</string>
     <string name="action_location">View Location</string>
-
     <string name="action_share">Share</string>
-
     <string name="msg_no_map_app">No map tool found for viewing your location.</string>
+    <string name="title_activity_base">BaseActivity</string>
 
 </resources>
